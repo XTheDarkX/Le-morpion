@@ -2,8 +2,19 @@
 #include <stdlib.h>
 #include "morpion.h"
 
-void affichageMorpion(morpion monMorpion) {
+void initialiserTableau(morp *morpion) {
+    int i = 0, j = 0;
 
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            morpion->tableau[i][j] = 0;
+        }
+    }
+    morpion->tour = 0;
+    morpion->libre = 9;
+}
+
+void affichageMorpion(morp monMorpion) {
     int i = 0, j = 0;
     char temp[0][0];
 
