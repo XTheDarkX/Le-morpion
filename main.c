@@ -4,5 +4,6 @@
 
 int main()
 {
-    affichageMorpion();
+    morp morpion;
+    affichageMorpion(morpion);
 }
