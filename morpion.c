@@ -11,11 +11,9 @@ void affichageMorpion() {
     printf(" *  X    *   O   *   X   *\n");
     printf(" *       *       *       *\n");
     printf(" * * * * * * * * * * * * *\n");
-    printf(" * * * * * * * * * * * * *\n");
     printf(" *       *       *       *\n");
     printf(" *  X    *   O   *   X   *\n");
     printf(" *       *       *       *\n");
-    printf(" * * * * * * * * * * * * *\n");
     printf(" * * * * * * * * * * * * *\n");
     printf(" *       *       *       *\n");
     printf(" *  X    *   O   *   X   *\n");
