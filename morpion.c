@@ -16,7 +16,7 @@ void initialiserTableau(morp *morpion) {
 
 void affichageMorpion(morp monMorpion) {
     int i = 0, j = 0;
-    char temp[0][0];
+    char temp[3][3];
 
     for(i = 0; i < 3; i++) {
         for(j = 0; i < 3; i++) {
