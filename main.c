@@ -5,5 +5,6 @@
 int main()
 {
     morp monMorpion;
-    affichageMorpion(morpion);
+    initialiserTableau(&monMorpion)
+    affichageMorpion(monMorpion);
 }
