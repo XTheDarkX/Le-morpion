@@ -38,15 +38,15 @@ void affichageMorpion(morp monMorpion) {
     printf("\n");
     printf(" * * * * * * * * * * * * *\n");
     printf(" *       *       *       *\n");
-    printf(" *  %c    *   %c   *   %c   *\n", temp[0][0], temp[0][1], temp[0][2]);
+    printf(" *  %c    *   %c   *   %c   *   A\n", temp[0][0], temp[0][1], temp[0][2]);
     printf(" *       *       *       *\n");
     printf(" * * * * * * * * * * * * *\n");
     printf(" *       *       *       *\n");
-    printf(" *  %c    *   %c   *   %c   *\n", temp[1][0], temp[1][1], temp[1][2]);
+    printf(" *  %c    *   %c   *   %c   *   B\n", temp[1][0], temp[1][1], temp[1][2]);
     printf(" *       *       *       *\n");
     printf(" * * * * * * * * * * * * *\n");
     printf(" *       *       *       *\n");
-    printf(" *  %c    *   %c   *   %c   *\n", temp[2][0], temp[2][1], temp[2][2]);
+    printf(" *  %c    *   %c   *   %c   *   C\n", temp[2][0], temp[2][1], temp[2][2]);
     printf(" *       *       *       *\n");
     printf(" * * * * * * * * * * * * *\n");
 
