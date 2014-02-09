@@ -19,14 +19,13 @@ void affichageMorpion(morp monMorpion) {
     char temp[3][3];
 
     for(i = 0; i < 3; i++) {
-        for(j = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
             if(monMorpion.tableau[i][j] == 1) {
                 temp[i][j] = 'X';
             }
             else if(monMorpion.tableau[i][j] == 2) {
                 temp[i][j] = 'O';
             }
-
             else {
                 temp[i][j] = ' ';
             }
