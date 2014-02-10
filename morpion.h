@@ -8,7 +8,8 @@ struct Morpion {
     int libre;
 };
 
-void initialiserTableau(morp *monMorpion);
-void affichageMorpion(morp monMorpion);
+void initialiserTableau(morp *morpion);
+void affichageMorpion(morp morpion);
+void joueurMorpion(morp monMorpion);
 
 #endif // MORPION_H_INCLUDED
