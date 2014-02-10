@@ -7,4 +7,5 @@ int main()
     morp monMorpion;
     initialiserTableau(&monMorpion);
     affichageMorpion(monMorpion);
+    joueurMorpion(monMorpion);
 }
