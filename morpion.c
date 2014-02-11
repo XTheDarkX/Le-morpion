@@ -55,40 +55,47 @@ void affichageMorpion(morp morpion) {
 }
 
 void joueurMorpion(morp morpion) {
-    int joueur = 1;
+    int joueur = 1, ok = 1;
+    do {
+        do{
+            int i = 0, j = 0;
 
-    do{
-        int i = 0, j = 0;
+            if(morpion.libre == 9) {
+                printf("\nC'est les X qui commencent.\n");
+            }
 
-        if(morpion.libre == 9) {
-            printf("\nC'est les X qui commencent.\n");
-        }
+            if(joueur == 1 && morpion.libre != 9) {
+                printf("\nC'est les X qui jouent.\n");
+            }
 
-        if(joueur == 1 && morpion.libre != 9) {
-           printf("\nC'est les X qui jouent.\n");
-        }
+            else if(joueur == 2 && morpion.libre != 9) {
+                printf("\nC'est les O qui commencent.\n");
+            }
 
-        else if(joueur == 2 && morpion.libre != 9) {
-           printf("\nC'est les O qui commencent.\n");
-        }
+            printf("\nIl reste %d coups\n", morpion.libre);
 
-        printf("\nIl reste %d coups\n", morpion.libre);
+            printf("\nSur quelle ligne ?");
+            printf("\n1. A");
+            printf("\n2. B");
+            printf("\n3. C\n ");
+            scanf("%d", &i);
+            i--;
 
-        printf("\nSur quelle ligne ?");
-        printf("\n1. A");
-        printf("\n2. B");
-        printf("\n3. C\n ");
-        scanf("%d", &i);
-        i--;
+            printf("\nSur quelle colonne jouez-vous ?");
+            printf("\n1. 1");
+            printf("\n2. 2");
+            printf("\n3. 3\n ");
+            scanf("%d", &j);
+            j--;
 
-        printf("\nSur quelle colonne jouez-vous ?");
-        printf("\n1. 1");
-        printf("\n2. 2");
-        printf("\n3. 3\n ");
-        scanf("%d", &j);
-        j--;
+            morpion.tableau[i][j] = joueur;
 
-        morpion.tableau[i][j] = joueur;
+            if(morpion.tableau[i][j] == 1 || morpion.tableau[i][j] == 2) {
+                printf("Vous essayez de jouer sur une case deja prise.");
+                ok = 0;
+            }
+        } while(ok != 1);
+
         affichageMorpion(morpion);
 
 // On vérifie les conditions de victoire pour les X
@@ -174,10 +181,12 @@ void joueurMorpion(morp morpion) {
         else {
   // On retire un coup possible
             morpion.libre--;
+
 // Match nul
             if(morpion.libre == 0) {
                 printf("Match nul\n");
             }
+
 // On change de joueur
             if(joueur == 1) {
                 joueur = 2;
@@ -187,4 +196,5 @@ void joueurMorpion(morp morpion) {
             }
         }
 
-    } while(morpion.libre != 0);}
+    } while(morpion.libre != 0);
+}
