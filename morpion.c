@@ -10,7 +10,6 @@ void initialiserTableau(morp *morpion) {
             morpion->tableau[i][j] = 0;
         }
     }
-    morpion->tour = 0;
     morpion->libre = 9;
 }
 
@@ -74,19 +73,24 @@ void joueurMorpion(morp morpion) {
 
             printf("\nIl reste %d coups\n", morpion.libre);
 
-            printf("\nSur quelle ligne ?");
-            printf("\n1. A");
-            printf("\n2. B");
-            printf("\n3. C\n ");
-            scanf("%d", &i);
-            i--;
+            do {
+                printf("\nSur quelle ligne jouez-vous (chiifre) ?");
+                printf("\n1. A");
+                printf("\n2. B");
+                printf("\n3. C\n ");
+                scanf("%d", &i);
+                i--;
+            } while(i != 1 || i != 2 || i != 3);
 
-            printf("\nSur quelle colonne jouez-vous ?");
-            printf("\n1. 1");
-            printf("\n2. 2");
-            printf("\n3. 3\n ");
-            scanf("%d", &j);
-            j--;
+            do {
+                printf("\nSur quelle colonne jouez-vous (chiffre) ?");
+                printf("\n1. 1");
+                printf("\n2. 2");
+                printf("\n3. 3\n ");
+                scanf("%d", &j);
+                j--;
+            } while(j != 1 || j != 2 || j != 3);
+
 
             if(morpion.tableau[i][j] == 1 || morpion.tableau[i][j] == 2) {
                 ok = 0;
