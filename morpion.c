@@ -89,8 +89,8 @@ void joueurMorpion(morp morpion) {
             j--;
 
             if(morpion.tableau[i][j] == 1 || morpion.tableau[i][j] == 2) {
-                printf("Vous essayez de jouer sur une case deja prise. Veuillez recommencer.\n");
                 ok = 0;
+                affichageMorpion(morpion);
             }
 
             else {
