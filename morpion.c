@@ -80,6 +80,7 @@ void joueurMorpion(morp morpion) {
                 printf("\n3. C\n ");
                 scanf("%d", &i);
                 i--;
+                affichageMorpion(morpion);
             } while(i != 0 && i != 1 && i != 2);
 
             do {
@@ -89,6 +90,7 @@ void joueurMorpion(morp morpion) {
                 printf("\n3. 3\n ");
                 scanf("%d", &j);
                 j--;
+                affichageMorpion(morpion);
             } while(j != 0 && j != 1 && j != 2);
 
 
