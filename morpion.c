@@ -88,12 +88,15 @@ void joueurMorpion(morp morpion) {
             scanf("%d", &j);
             j--;
 
-            morpion.tableau[i][j] = joueur;
-
             if(morpion.tableau[i][j] == 1 || morpion.tableau[i][j] == 2) {
-                printf("Vous essayez de jouer sur une case deja prise.");
+                printf("Vous essayez de jouer sur une case deja prise. Veuillez recommencer.\n");
                 ok = 0;
             }
+
+            else {
+                morpion.tableau[i][j] = joueur;
+            }
+
         } while(ok != 1);
 
         affichageMorpion(morpion);
@@ -179,7 +182,7 @@ void joueurMorpion(morp morpion) {
 // ============================================= //
 
         else {
-  // On retire un coup possible
+// On retire un coup possible
             morpion.libre--;
 
 // Match nul
