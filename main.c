@@ -4,8 +4,17 @@
 
 int main()
 {
-    morp monMorpion;
-    initialiserTableau(&monMorpion);
-    affichageMorpion(monMorpion);
-    joueurMorpion(monMorpion);
+    int continuer = 1;
+    do {
+        morp monMorpion;
+        initialiserTableau(&monMorpion);
+        affichageMorpion(monMorpion);
+        joueurMorpion(monMorpion);
+
+        printf("Souhaitez-vous recommencer ?");
+        printf("\n 1. Oui");
+        printf("\n 2. Non\n ");
+        scanf("%d", &continuer);
+    } while(continuer != 2);
+
 }
