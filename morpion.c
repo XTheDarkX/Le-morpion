@@ -80,7 +80,7 @@ void joueurMorpion(morp morpion) {
                 printf("\n3. C\n ");
                 scanf("%d", &i);
                 i--;
-            } while(i != 0 || i != 1 || i != 2);
+            } while(i != 0 && i != 1 && i != 2);
 
             do {
                 printf("\nSur quelle colonne jouez-vous (chiffre) ?");
@@ -89,7 +89,7 @@ void joueurMorpion(morp morpion) {
                 printf("\n3. 3\n ");
                 scanf("%d", &j);
                 j--;
-            } while(j != 0 || j != 1 || j != 2);
+            } while(j != 0 && j != 1 && j != 2);
 
 
             if(morpion.tableau[i][j] == 1 || morpion.tableau[i][j] == 2) {
